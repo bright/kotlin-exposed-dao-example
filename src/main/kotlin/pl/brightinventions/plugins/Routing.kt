@@ -5,10 +5,10 @@ import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import pl.brightinventions.persistance.PersonRepositoryImpl
+import pl.brightinventions.persistance.person.PersonRepository
 
 fun Application.configureRouting() {
-    val repository = PersonRepositoryImpl()
+    val repository = PersonRepository()
 
     routing {
         route("/person") {

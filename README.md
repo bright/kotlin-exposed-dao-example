@@ -1,7 +1,7 @@
-Exposed in your project - part 1
+Exposed in your project - part 2 - DAO
 ===
 
-In [the tutorial](https://brightinventions.pl/blog/exposed-in-your-project-part-1), we are going to learn what is and how to use JetBrains/Exposed framework, the DSL approach especially.
+In [the tutorial](https://brightinventions.pl/blog/exposed-in-your-project-part-2-dao), we are going to learn how to modify our [previous code](https://brightinventions.pl/blog/exposed-in-your-project-part-1) and use JetBrains/Exposed in DAO manner
 
 License
 ---

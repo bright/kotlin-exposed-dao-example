@@ -1,18 +1,18 @@
 package pl.brightinventions.plugins
 
-import pl.brightinventions.dto.CreatePersonDto
-import pl.brightinventions.exposed.Database
-import pl.brightinventions.persistance.PersonRepositoryImpl
-import pl.brightinventions.persistance.table.PersonTable
 import io.ktor.server.application.*
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 import pl.brightinventions.dto.CreateAddressDto
-import pl.brightinventions.persistance.table.AddressTable
+import pl.brightinventions.dto.CreatePersonDto
+import pl.brightinventions.exposed.Database
+import pl.brightinventions.persistance.person.PersonRepository
+import pl.brightinventions.persistance.person.AddressTable
+import pl.brightinventions.persistance.person.PersonTable
 
 fun Application.configureData() {
     Database.register()
-    val repository = PersonRepositoryImpl()
+    val repository = PersonRepository()
     transaction {
         SchemaUtils.create(PersonTable)
         SchemaUtils.create(AddressTable)
